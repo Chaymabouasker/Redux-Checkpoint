@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,100;1,300;1,500&family=RocknRoll+One&display=swap");
+html {
+  line-height: 1.15;
+}
+* {
+  /*box-sizing: border-box;*/
+  margin: 0;
+  padding: 0;
+  font-family: "RocknRoll One", sans-serif;
+}
+body {
+  background: linear-gradient(
+    to right bottom,
+    #81a1d0,
+    #8a94c3,
+    #9188b4,
+    #957da4,
+    #957292
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #222;
+}
+.App {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.App h1 {
+  display: inline;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #e1e1e1;
+  text-shadow: 0 0 5px #433aa8, 3px -1px 5px #271c6c;
+}
+.App h1:hover {
+  transform: scale(1.1);
+}
