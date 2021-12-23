@@ -29,7 +29,7 @@ const Todos = () => {
                 <li key={i} className='card'>
                     <span style={task.isDone ?{textDecoration: "line-through"} : {}}>{task.description}</span>
                     <div className='btns'>
-                    <Update taskDesc={task.description} newId={task.id}/>
+                    <Update task={task}/>
                     <button  style={{color:'green'} } onClick={()=>TaskIsDone(task.id)} ><BiCalendarCheck/></button>
 
                     <button  style={{color:'red'}}onClick={()=>dispatch({type:"delete",payload:task.id})}><BiCalendarX/></button>
