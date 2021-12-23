@@ -3,14 +3,14 @@ import { FormControl, Modal, Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import {BiCalendarEdit}from'react-icons/bi'
 
-const Update=({taskDesc,newId})=> {
+const Update=({task})=> {
     const dispatch = useDispatch();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [edit, setEdit] = useState(taskDesc);
+    const [edit, setEdit] = useState(task.description);
     const EditTask = ()=>{
-        dispatch({type: "edit",payload:{newDesc:edit,id:newId}})  
+        dispatch({type: "edit",payload:{newDesc:edit,id:task.id}})  
         handleClose();
     }
 
@@ -31,7 +31,7 @@ const Update=({taskDesc,newId})=> {
                             type="text"
                             placeholder="edit task"
                             className="Input"
-                            value={edit}
+                            defaultValue={task.description}
                             onChange={(e)=>setEdit(e.target.value)}
                             style={{color:'#271c6c'}}
                         
